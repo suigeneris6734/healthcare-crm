@@ -1,0 +1,2 @@
+import {useEffect,useState} from 'react';import {api} from '../services/api';import EmailHistoryList from '../components/EmailHistoryList';
+export default function EmailHistoryPage(){const[rows,setRows]=useState(null);useEffect(()=>{api.get('/email-actions').then(setRows)},[]);return <div className="space-y-5"><h1 className="text-2xl font-bold">Mail Geçmişi</h1><p className="text-slate-500">Gönderilen mailler, takipler ve manuel notlar burada listelenir.</p><div className="card">{rows===null?'Yükleniyor...':<EmailHistoryList items={rows}/>}</div></div>}

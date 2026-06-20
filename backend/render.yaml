@@ -1,0 +1,17 @@
+services:
+  - type: web
+    name: medicare-crm-backend
+    env: node
+    buildCommand: npm install
+    startCommand: npm start
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: PORT
+        value: 4000
+      - key: ADMIN_USER
+        value: admin
+      - key: ADMIN_PASS
+        value: 123456
+      - key: JWT_SECRET
+        value: generate-a-secure-secret-here

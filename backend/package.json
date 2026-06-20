@@ -1,0 +1,24 @@
+{
+  "scripts": {
+    "dev": "node --watch src/server.js",
+    "start": "node src/server.js",
+    "seed": "node src/db/seed.js",
+    "init-db": "node src/db/init-run.js"
+  },
+  "dependencies": {
+    "@google/generative-ai": "^0.24.1",
+    "bcryptjs": "^3.0.3",
+    "better-sqlite3": "^12.10.0",
+    "cors": "^2.8.5",
+    "csv-parser": "^3.2.0",
+    "docx": "^9.7.1",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "jsonwebtoken": "^9.0.3",
+    "multer": "^2.0.2",
+    "node-cron": "^3.0.3",
+    "nodemailer": "^6.9.16",
+    "pdfmake": "^0.3.11",
+    "xlsx": "^0.18.5"
+  }
+}

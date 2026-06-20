@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body { 
+  @apply bg-[#f8fafc] text-slate-800 antialiased; 
+  font-family: 'Inter', sans-serif;
+  background-image: radial-gradient(circle at 0% 0%, #bae6fd 0%, transparent 40%), radial-gradient(circle at 100% 100%, #e0e7ff 0%, transparent 40%);
+  background-attachment: fixed;
+  min-height: 100vh;
+}
+
+.card { 
+  @apply bg-white/70 backdrop-blur-xl rounded-3xl shadow-[0_8px_30px_rgb(0,0,0,0.04)] border border-white p-6 transition-all duration-300; 
+}
+
+.btn { 
+  @apply rounded-xl px-5 py-2.5 text-sm font-semibold bg-gradient-to-r from-sky-500 to-blue-600 text-white shadow-md shadow-sky-500/20 hover:shadow-lg hover:shadow-sky-500/30 hover:-translate-y-0.5 disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none disabled:shadow-none transition-all duration-200; 
+}
+
+.btn-light { 
+  @apply rounded-xl px-5 py-2.5 text-sm font-semibold bg-white text-sky-700 border border-sky-100 shadow-sm hover:bg-sky-50 hover:border-sky-200 disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-200; 
+}
+
+.btn-success { 
+  @apply rounded-xl px-5 py-2.5 text-sm font-semibold bg-emerald-50 text-emerald-700 border border-emerald-100 disabled:opacity-80 disabled:cursor-not-allowed; 
+}
+
+.input { 
+  @apply w-full rounded-xl border border-slate-200 px-4 py-2.5 text-sm bg-slate-50/50 focus:bg-white focus:outline-none focus:ring-2 focus:ring-sky-100 focus:border-sky-400 transition-all; 
+}
+
+th { 
+  @apply text-left text-xs uppercase tracking-wider font-semibold text-slate-500 bg-slate-50/80; 
+}
+
+td, th { 
+  @apply px-4 py-4 border-b border-slate-100/50 align-middle; 
+}
+
+.section-title { 
+  @apply text-2xl font-bold text-slate-800 tracking-tight; 
+}
+
+.section-help { 
+  @apply text-sm text-slate-500 leading-relaxed; 
+}
+
+.friendly-empty { 
+  @apply text-slate-500 bg-white border border-dashed border-slate-200 rounded-2xl p-8 text-center; 
+}
+
+.completed-row { 
+  @apply bg-emerald-50/40 text-slate-500 transition-colors; 
+}
+
+.completed-row td:first-child { 
+  @apply text-emerald-800 font-medium; 
+}
+
+.org-table { 
+  @apply w-full min-w-[980px] table-fixed; 
+}
+
+.org-table td, .org-table th { 
+  @apply py-3 align-middle; 
+}
+
+.org-name-col { width: 34%; }
+.org-name-cell { @apply font-semibold text-slate-800; }
+.org-name-link { display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; @apply leading-snug hover:text-sky-600 transition-colors; }
+.org-email-cell { @apply max-w-56 truncate text-slate-600; }
+.org-actions { @apply whitespace-nowrap flex gap-2 items-center; }
+.org-actions .btn-light { @apply px-3 py-1.5 text-xs; }
+

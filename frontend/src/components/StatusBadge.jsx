@@ -1,0 +1,3 @@
+import { statusLabels } from '../utils/labels';
+const colors={NEW:'bg-slate-100 text-slate-700',EMAIL_PLANNED:'bg-blue-100 text-blue-700',EMAIL_SENT:'bg-indigo-100 text-indigo-700',FOLLOW_UP_DUE:'bg-amber-100 text-amber-800',FOLLOW_UP_SENT:'bg-purple-100 text-purple-700',REPLIED:'bg-emerald-100 text-emerald-700',POSITIVE:'bg-green-100 text-green-700',NEGATIVE:'bg-red-100 text-red-700',CLOSED:'bg-slate-300 text-slate-700'};
+export default function StatusBadge({status}){return <span className={`px-2 py-1 rounded text-xs font-medium ${colors[status]||'bg-slate-100'}`}>{statusLabels[status]||status}</span>}

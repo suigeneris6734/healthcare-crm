@@ -1,0 +1,1 @@
+import BackupPanel from '../components/BackupPanel';export default function BackupsPage(){return <div className='space-y-5'><h1 className='text-2xl font-bold'>Yedekleme</h1><p className='text-slate-500'>SQLite veritabanını güvenli şekilde yedekleyip listeleyebilirsiniz.</p><BackupPanel/></div>}
