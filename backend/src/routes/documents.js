@@ -7,7 +7,7 @@ const db = require('../db/connection');
 const { GoogleGenerativeAI } = require('@google/generative-ai');
 
 // Ensure uploads directory exists
-const uploadDir = path.join(__dirname, '../../uploads');
+const uploadDir = process.env.UPLOAD_PATH || path.join(__dirname, '../../uploads');
 if (!fs.existsSync(uploadDir)) {
   fs.mkdirSync(uploadDir, { recursive: true });
 }

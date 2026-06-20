@@ -12,7 +12,8 @@ app.use(express.urlencoded({ extended: true, limit: '50mb' }));
 
 // Serve uploaded files statically
 const path = require('path');
-app.use('/uploads', express.static(path.join(__dirname, '../../uploads')));
+const uploadDir = process.env.UPLOAD_PATH || path.join(__dirname, '../../uploads');
+app.use('/uploads', express.static(uploadDir));
 
 app.get('/api/health',(req,res)=>res.json({ok:true}));
 app.use('/api/dashboard', require('./routes/dashboard'));
